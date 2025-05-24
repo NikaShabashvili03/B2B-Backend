@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folder (adjust if your venv folder is named differently)
+venv/
+env/
+.venv/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+
+# Media files (user uploads)
+media/
+
+# Static files
+staticfiles/
+
+# Environment variables
+.env
+
+# VS Code settings folder
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Python test cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# mypy
+.mypy_cache/
+
+# pipenv
+Pipfile.lock
+
+# pyenv
+.python-version

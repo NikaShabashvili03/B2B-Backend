@@ -137,15 +137,18 @@ CORS_ALLOW_METHODS = ['*']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+    'https://b2b-backend-1.onrender.com'
 ]
 
 ALLOWED_HOSTS = [
     '127.0.0.1', 
     'localhost',
+    'b2b-backend-1.onrender.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
+    'https://b2b-backend-1.onrender.com'
 ]
 
 # Sessions

@@ -1,0 +1,351 @@
+type: collection.insomnia.rest/5.0
+name: B2B Django
+meta:
+  id: wrk_40e93956cb5d42d3a96c76f0a1ea7721
+  created: 1747889592368
+  modified: 1747889592368
+collection:
+  - name: Cart
+    meta:
+      id: fld_c57cd08a92634ff3ae95af59ea8b9074
+      created: 1747889600759
+      modified: 1747889610963
+      sortKey: -1747889600760
+    children:
+      - url: http://localhost:8000/api/v1/cart/
+        name: Get Cart
+        meta:
+          id: req_6f550fb67c244c0ba0c77273e43a7e72
+          created: 1747889602301
+          modified: 1747889745754
+          isPrivate: false
+          sortKey: -1747889602301
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/cart/
+        name: Add to cart
+        meta:
+          id: req_487e86d8b9694dfeb4e726103128b970
+          created: 1747889762305
+          modified: 1747992984814
+          isPrivate: false
+          sortKey: -1747889762305
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"product": 10,
+            	"quantity": 5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/cart/
+        name: New Request
+        meta:
+          id: req_b7fdd70c4f0c40558d558ae1bad6a5c3
+          created: 1747890565941
+          modified: 1747890725426
+          isPrivate: false
+          sortKey: -1747890565941
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"product": 10
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Customer
+    meta:
+      id: fld_46765cab795144ccae8946357c5c25cb
+      created: 1747889614560
+      modified: 1747992965384
+      sortKey: -1747889614560
+    children:
+      - url: http://localhost:8000/api/v1/customer/login/
+        name: Login
+        meta:
+          id: req_9805cf22f3fe42be828368000f755bdf
+          created: 1747889616477
+          modified: 1747889678269
+          isPrivate: false
+          sortKey: -1747889616477
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "shabashvilinika@yahoo.com",
+            	"password": "123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/customer/profile/
+        name: Profile
+        meta:
+          id: req_343708d9ee6747d59534ad0867bd1d5d
+          created: 1747889689712
+          modified: 1747889703520
+          isPrivate: false
+          sortKey: -1747889689712
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Order
+    meta:
+      id: fld_6fd126f3c884491e870f4a1ee8775506
+      created: 1747890899626
+      modified: 1747890899626
+      sortKey: -1747890899626
+    children:
+      - url: http://localhost:8000/api/v1/order/submit
+        name: Submit
+        meta:
+          id: req_1f6652385ecc483fbccbc0c66288772a
+          created: 1747890901572
+          modified: 1747891205587
+          isPrivate: false
+          sortKey: -1747890901572
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"shipping_address": "გორგასალი 159"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/order/my
+        name: My Orders
+        meta:
+          id: req_883bebf708a74fc1820ebd6207c38e39
+          created: 1747891392888
+          modified: 1747891447317
+          isPrivate: false
+          sortKey: -1747891392888
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Category
+    meta:
+      id: fld_137880d43acd4f9b96fc78ec8d468f23
+      created: 1747982312270
+      modified: 1747982312270
+      sortKey: -1747982312270
+    children:
+      - url: http://localhost:8000/api/v1/category/view
+        name: Get Categories
+        meta:
+          id: req_f41795b7ba654e169b9000a52a98dc1d
+          created: 1747982314364
+          modified: 1747982713525
+          isPrivate: false
+          sortKey: -1747982314364
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/category/view/8
+        name: Category By Id
+        meta:
+          id: req_348112b32e284c1e963ff99b3da6e6e1
+          created: 1747982756356
+          modified: 1747993221476
+          isPrivate: false
+          sortKey: -1747982756356
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/category/view/8/attributes
+        name: Attributes
+        meta:
+          id: req_9592d6d641e7485aaf6a32b526f3607e
+          created: 1747983000331
+          modified: 1747993230155
+          isPrivate: false
+          sortKey: -1747983000331
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Products
+    meta:
+      id: fld_4edac8bf4847475d89544128aace6522
+      created: 1747983889466
+      modified: 1747983889466
+      sortKey: -1747983889466
+    children:
+      - url: http://localhost:8000/api/v1/product/category/7?supplier_id=3
+        name: Products By Category
+        meta:
+          id: req_90d6a79d197b43a5934d76aa7ec9a230
+          created: 1747983891682
+          modified: 1747992904025
+          isPrivate: false
+          sortKey: -1747983891682
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/api/v1/product/10
+        name: Product by id
+        meta:
+          id: req_2610049986584c2eaa002976dc271b0d
+          created: 1747991750459
+          modified: 1747991776041
+          isPrivate: false
+          sortKey: -1747991750459
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_cc8e950f44f187e97b8f72ecdc63da4eb4688239
+    created: 1747889592373
+    modified: 1748073951894
+  cookies:
+    - key: sessionId
+      value: 5ba0f15d-0284-4c7c-af1d-319d44445f51
+      maxAge: 172800
+      domain: localhost
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-05-22T04:54:46.464Z
+      lastAccessed: 2025-05-24T08:05:51.894Z
+      sameSite: none
+      id: 0bf77f29-f905-4424-8458-d4ea961358a6
+    - key: csrftoken
+      value: KVfH9zgBU1uExeNLFb53QVWI6mT2p8iM
+      maxAge: 31449600
+      domain: localhost
+      path: /
+      hostOnly: true
+      creation: 2025-05-22T04:54:46.466Z
+      lastAccessed: 2025-05-24T08:05:51.894Z
+      sameSite: lax
+      id: 2104ed00-c183-44b9-9c80-2eff351f9540
+environments:
+  name: Base Environment
+  meta:
+    id: env_cc8e950f44f187e97b8f72ecdc63da4eb4688239
+    created: 1747889592370
+    modified: 1747889592370
+    isPrivate: false
